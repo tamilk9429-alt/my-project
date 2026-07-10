@@ -1,0 +1,9 @@
+.npm/
+.cache/
+.node/
+.buildozer/
+.config/
+bin/
+build.log
+myweb/
+grabcam/
