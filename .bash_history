@@ -1,33 +1,3 @@
-cp *.png *.jpg /home/userland/sdcard/Pictures/
-cp *.png *.jpg /home/userland/sdcard/DCIM/
-cp *.png *.jpg /home/userland/scopedStorage/
-python3 -m http.server 8080
-http://localhost:8080
-python3 -m http.server 8080
-sudo apt-get update
-sudo apt-get upgrade -y
-sudo apt-get install git -y
-sudo apt-get install python3 python3-pip -y
-pip3 install lolcat --break-system-packages
-git clone https://github.com/noob-hackers/grabcam
-cd grabcam
-chmod +x grabcam.sh
-bash grabcam.sh
-sudo apt-get install php -y
-sudo apt-get install wget curl -y
-bash grabcam.sh
-ngrok config add-authtoken 3FponkI6AckD27jgyKSQOvKBXxf_6ZHooQASCbKGxoTmnXFCb
-cd ~/grabcam
-bash grabcam.sh
-sudo apt update && sudo apt install -y nodejs npm
-sudo npm install -y -g localtunnel
-nano ~/.bashrc
-source ~/.bashrc
-sharelink 8080
-nano ~/.bashrc
-source ~/.bashrc
-nano ~/.bashrc
-source ~/.bashrc
 run_public python3 tool.py
 sudo apt update && sudo apt install -y net-tools
 nano ~/.bashrc
@@ -498,3 +468,33 @@ npm cache clean --force
 cd ~/myweb
 nano index.html
 git up
+git app
+build.yml
+cd my-project
+mkdir -p .github/workflows && cat << 'EOF' > .github/workflows/build.yml
+name: Build Android APK
+on:
+  push:
+    branches: [ "main", "master" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - run: echo "Preparing Web APK..."
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web-files
+          path: .
+EOF
+
+git config --global alias.app '!git add . && git commit -m "auto build app" && git push && echo "" && echo "APK Cloud-la Ready Aaguthu! Intha Link-il Download Seiyalam:" && echo "https://github.com/tamilk9429-alt/my-project/actions"'
+git app
+git remote add origin https://github.com/tamilk9429-alt/my-project.git
+git branch -M main
+git app
+git app
