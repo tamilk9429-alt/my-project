@@ -1,0 +1,149 @@
+Xsession: X session started for userland at Fri Jul 17 12:46:53 UTC 2026
+dbus-update-activation-environment: error: unable to connect to D-Bus: Unable to autolaunch when setuid
+X Error of failed request:  BadValue (integer parameter out of range for operation)
+  Major opcode of failed request:  109 (X_ChangeHosts)
+  Value in failed request:  0x5
+  Serial number of failed request:  6
+  Current serial number in output stream:  8
+localuser:userland being added to access control list
+ls: cannot open directory '/sys/class/power_supply': Permission denied
+Failed to scan devices: Permission denied
+X Error of failed request:  BadValue (integer parameter out of range for operation)
+  Major opcode of failed request:  130 (XTEST)
+  Minor opcode of failed request:  2 (X_XTestFakeInput)
+  Value in failed request:  0x0
+  Serial number of failed request:  13
+  Current serial number in output stream:  16
+dbus-update-activation-environment: error: unable to connect to D-Bus: Unable to autolaunch when setuid
+** Message: 12:46:54.570: main.vala:101: Session is LXDE
+** Message: 12:46:54.570: main.vala:102: DE is LXDE
+** Message: 12:46:54.774: main.vala:133: log directory: /home/userland/.cache/lxsession/LXDE
+** Message: 12:46:54.775: main.vala:134: log path: /home/userland/.cache/lxsession/LXDE/run.log
+Xsession: X session started for userland at Fri Jul 17 12:53:26 UTC 2026
+dbus-update-activation-environment: error: unable to connect to D-Bus: Unable to autolaunch when setuid
+X Error of failed request:  BadValue (integer parameter out of range for operation)
+  Major opcode of failed request:  109 (X_ChangeHosts)
+  Value in failed request:  0x5
+  Serial number of failed request:  6
+  Current serial number in output stream:  8
+localuser:userland being added to access control list
+ls: cannot open directory '/sys/class/power_supply': Permission denied
+Failed to scan devices: Permission denied
+X Error of failed request:  BadValue (integer parameter out of range for operation)
+  Major opcode of failed request:  130 (XTEST)
+  Minor opcode of failed request:  2 (X_XTestFakeInput)
+  Value in failed request:  0x0
+  Serial number of failed request:  13
+  Current serial number in output stream:  16
+dbus-update-activation-environment: error: unable to connect to D-Bus: Unable to autolaunch when setuid
+** Message: 12:53:27.492: main.vala:101: Session is LXDE
+** Message: 12:53:27.494: main.vala:102: DE is LXDE
+** Message: 12:53:27.691: main.vala:133: log directory: /home/userland/.cache/lxsession/LXDE
+** Message: 12:53:27.692: main.vala:134: log path: /home/userland/.cache/lxsession/LXDE/run.log
+Xsession: X session started for userland at Fri Jul 17 12:57:54 UTC 2026
+dbus-update-activation-environment: error: unable to connect to D-Bus: Unable to autolaunch when setuid
+X Error of failed request:  BadValue (integer parameter out of range for operation)
+  Major opcode of failed request:  109 (X_ChangeHosts)
+  Value in failed request:  0x5
+  Serial number of failed request:  6
+  Current serial number in output stream:  8
+localuser:userland being added to access control list
+ls: cannot open directory '/sys/class/power_supply': Permission denied
+Failed to scan devices: Permission denied
+X Error of failed request:  BadValue (integer parameter out of range for operation)
+  Major opcode of failed request:  130 (XTEST)
+  Minor opcode of failed request:  2 (X_XTestFakeInput)
+  Value in failed request:  0x0
+  Serial number of failed request:  13
+  Current serial number in output stream:  16
+dbus-update-activation-environment: error: unable to connect to D-Bus: Unable to autolaunch when setuid
+** Message: 12:57:55.725: main.vala:101: Session is LXDE
+** Message: 12:57:55.726: main.vala:102: DE is LXDE
+** Message: 12:57:55.937: main.vala:133: log directory: /home/userland/.cache/lxsession/LXDE
+** Message: 12:57:55.939: main.vala:134: log path: /home/userland/.cache/lxsession/LXDE/run.log
+Xsession: X session started for userland at Fri Jul 17 14:58:20 UTC 2026
+dbus-update-activation-environment: error: unable to connect to D-Bus: Unable to autolaunch when setuid
+X Error of failed request:  BadValue (integer parameter out of range for operation)
+  Major opcode of failed request:  109 (X_ChangeHosts)
+  Value in failed request:  0x5
+  Serial number of failed request:  6
+  Current serial number in output stream:  8
+localuser:userland being added to access control list
+ls: cannot open directory '/sys/class/power_supply': Permission denied
+Failed to scan devices: Permission denied
+X Error of failed request:  BadValue (integer parameter out of range for operation)
+  Major opcode of failed request:  130 (XTEST)
+  Minor opcode of failed request:  2 (X_XTestFakeInput)
+  Value in failed request:  0x0
+  Serial number of failed request:  13
+  Current serial number in output stream:  16
+dbus-update-activation-environment: error: unable to connect to D-Bus: Unable to autolaunch when setuid
+** Message: 14:58:33.047: main.vala:101: Session is LXDE
+** Message: 14:58:33.074: main.vala:102: DE is LXDE
+** Message: 14:58:37.758: main.vala:133: log directory: /home/userland/.cache/lxsession/LXDE
+** Message: 14:58:37.770: main.vala:134: log path: /home/userland/.cache/lxsession/LXDE/run.log
+Xsession: X session started for userland at Fri Jul 17 15:07:48 UTC 2026
+dbus-update-activation-environment: error: unable to connect to D-Bus: Unable to autolaunch when setuid
+X Error of failed request:  BadValue (integer parameter out of range for operation)
+  Major opcode of failed request:  109 (X_ChangeHosts)
+  Value in failed request:  0x5
+  Serial number of failed request:  6
+  Current serial number in output stream:  8
+localuser:userland being added to access control list
+ls: cannot open directory '/sys/class/power_supply': Permission denied
+Failed to scan devices: Permission denied
+X Error of failed request:  BadValue (integer parameter out of range for operation)
+  Major opcode of failed request:  130 (XTEST)
+  Minor opcode of failed request:  2 (X_XTestFakeInput)
+  Value in failed request:  0x0
+  Serial number of failed request:  13
+  Current serial number in output stream:  16
+dbus-update-activation-environment: error: unable to connect to D-Bus: Unable to autolaunch when setuid
+** Message: 15:07:50.258: main.vala:101: Session is LXDE
+** Message: 15:07:50.259: main.vala:102: DE is LXDE
+** Message: 15:07:50.993: main.vala:133: log directory: /home/userland/.cache/lxsession/LXDE
+** Message: 15:07:50.994: main.vala:134: log path: /home/userland/.cache/lxsession/LXDE/run.log
+Xsession: X session started for userland at Sat Sep  5 17:08:58 UTC 2026
+dbus-update-activation-environment: error: unable to connect to D-Bus: Unable to autolaunch when setuid
+X Error of failed request:  BadValue (integer parameter out of range for operation)
+  Major opcode of failed request:  109 (X_ChangeHosts)
+  Value in failed request:  0x5
+  Serial number of failed request:  6
+  Current serial number in output stream:  8
+localuser:userland being added to access control list
+ls: cannot open directory '/sys/class/power_supply': Permission denied
+Failed to scan devices: Permission denied
+X Error of failed request:  BadValue (integer parameter out of range for operation)
+  Major opcode of failed request:  130 (XTEST)
+  Minor opcode of failed request:  2 (X_XTestFakeInput)
+  Value in failed request:  0x0
+  Serial number of failed request:  13
+  Current serial number in output stream:  16
+dbus-update-activation-environment: error: unable to connect to D-Bus: Unable to autolaunch when setuid
+dbus-update-activation-environment: error: unable to connect to D-Bus: Unable to autolaunch when setuid
+** Message: 17:09:00.521: main.vala:101: Session is LXDE
+** Message: 17:09:00.523: main.vala:102: DE is LXDE
+** Message: 17:09:01.191: main.vala:133: log directory: /home/userland/.cache/lxsession/LXDE
+** Message: 17:09:01.192: main.vala:134: log path: /home/userland/.cache/lxsession/LXDE/run.log
+Xsession: X session started for userland at Sat Sep  5 17:11:12 UTC 2026
+dbus-update-activation-environment: error: unable to connect to D-Bus: Unable to autolaunch when setuid
+X Error of failed request:  BadValue (integer parameter out of range for operation)
+  Major opcode of failed request:  109 (X_ChangeHosts)
+  Value in failed request:  0x5
+  Serial number of failed request:  6
+  Current serial number in output stream:  8
+localuser:userland being added to access control list
+ls: cannot open directory '/sys/class/power_supply': Permission denied
+Failed to scan devices: Permission denied
+X Error of failed request:  BadValue (integer parameter out of range for operation)
+  Major opcode of failed request:  130 (XTEST)
+  Minor opcode of failed request:  2 (X_XTestFakeInput)
+  Value in failed request:  0x0
+  Serial number of failed request:  13
+  Current serial number in output stream:  16
+dbus-update-activation-environment: error: unable to connect to D-Bus: Unable to autolaunch when setuid
+dbus-update-activation-environment: error: unable to connect to D-Bus: Unable to autolaunch when setuid
+** Message: 17:11:14.659: main.vala:101: Session is LXDE
+** Message: 17:11:14.660: main.vala:102: DE is LXDE
+** Message: 17:11:15.320: main.vala:133: log directory: /home/userland/.cache/lxsession/LXDE
+** Message: 17:11:15.321: main.vala:134: log path: /home/userland/.cache/lxsession/LXDE/run.log

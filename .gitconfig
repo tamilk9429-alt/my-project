@@ -1,0 +1,11 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	email = tamilk9429@gmail.com
+	name = tamilk9429-alt
+[alias]
+	up = !git add . && git commit -m \"update\" && git push && echo \"\" && echo \"Ungaludaya Live Website Link Idhan:\" && echo \"https://tamilk9429-alt.github.io/my-project/\"
