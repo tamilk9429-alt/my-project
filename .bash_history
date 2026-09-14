@@ -1,6 +1,3 @@
-cp *.png *.jpg /sdcard/Documents/
-cp *.png *.jpg /home/userland/sdcard/
-ls /home/userland/sdcard/
 cp *.png *.jpg /home/userland/sdcard/Pictures/
 cp *.png *.jpg /home/userland/sdcard/DCIM/
 cp *.png *.jpg /home/userland/scopedStorage/
@@ -498,3 +495,6 @@ npm install @capacitor/core @capacitor/cli --save
 npx cap init
 npm cache clean --force
 npm cache clean --force
+cd ~/myweb
+nano index.html
+git up
