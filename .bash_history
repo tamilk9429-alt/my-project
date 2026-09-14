@@ -1,8 +1,3 @@
-cd grabcam
-ls
-cp *.jpg /sdcard/
-cp ~/grabcam/*.jpg /sdcard/
-cp cam* /sdcard/Documents/
 cp *.png *.jpg /sdcard/Documents/
 cp *.png *.jpg /home/userland/sdcard/
 ls /home/userland/sdcard/
@@ -498,3 +493,8 @@ cd ~/myweb
 nano index.html
 surge . --domain kamalnath.surge.sh
 rm index.html
+npm init -y
+npm install @capacitor/core @capacitor/cli --save
+npx cap init
+npm cache clean --force
+npm cache clean --force
