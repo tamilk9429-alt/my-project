@@ -9,3 +9,4 @@
 	name = tamilk9429-alt
 [alias]
 	up = !git add . && git commit -m \"update\" && git push && echo \"\" && echo \"Ungaludaya Live Website Link Idhan:\" && echo \"https://tamilk9429-alt.github.io/my-project/\"
+	app = !git add . && git commit -m \"app update\" && git push && echo \"\" && echo \"Ungaludaya Website-ai APK-aka Matri Download Seiya Intha Link-ai Open Pannungal:\" && echo \"https://www.pwabuilder.com/\"
