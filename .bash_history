@@ -1,4 +1,3 @@
-run_public python3 tool.py
 sudo apt update && sudo apt install -y net-tools
 nano ~/.bashrc
 run_public python3 -m http.server 8080
@@ -498,3 +497,4 @@ git remote add origin https://github.com/tamilk9429-alt/my-project.git
 git branch -M main
 git app
 git app
+git up
