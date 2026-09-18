@@ -1,10 +1,3 @@
-sudo apt update && sudo apt install -y net-tools
-nano ~/.bashrc
-run_public python3 -m http.server 8080
-nano ~/.bashrc
-source ~/.bashrc
-run_public python3 -m http.server 8080
-nano ~/.bashrc
 source ~/.bashrc
 run_public python3 -m http.server 8081
 ssh-keygen -t ed25519 -N "" -f ~/.ssh/id_ed25519
@@ -498,3 +491,10 @@ git branch -M main
 git app
 git app
 git up
+cd ~/myweb
+nano index.html
+surge . --domain kamalnath.surge.sh
+o kamalnath.surge.sh
+cd ~/myweb
+nano index.html
+surge . --domain kamalnath.surge.sh
